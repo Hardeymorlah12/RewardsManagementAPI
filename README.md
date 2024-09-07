@@ -45,6 +45,198 @@ API Endpoints
 
   Response for Register endpoint:
 
+  {
+    "id": 1,
+    "name": "Adewale Saheed Ademola",
+    "username": "hardeymorlah12@gmail.com",
+    "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+    "phoneNumber": "08145032997",
+    "role": "USER",
+    "enabled": true,
+    "accountNonExpired": true,
+    "credentialsNonExpired": true,
+    "authorities": [
+        {
+            "authority": "USER"
+        }
+    ],
+    "accountNonLocked": true
+
+}
+
+Response for Login Endpoint:
+
+{
+    "user": {
+        "id": 1,
+        "name": "Adewale Saheed Ademola",
+        "username": "hardeymorlah12@gmail.com",
+        "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+        "phoneNumber": "08145032997",
+        "role": "USER",
+        "enabled": true,
+        "accountNonExpired": true,
+        "credentialsNonExpired": true,
+        "authorities": [
+            {
+                "authority": "USER"
+            }
+        ],
+        "accountNonLocked": true
+    },
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXJkZXltb3JsYWgxMkBnbWFpbC5jb20iLCJpYXQiOjE3MjU3MjY1NTYsImV4cCI6MTcyNTczMDE1NiwiaXNzIjoiQWJiZXkgRnVsbFN0YWNrIENoYWxsZW5nZSBBcHAgMS4wIn0.PhzZnyFb980e0voypwbQlEmbyoj1HSnT1gdLCD_1Hvs"
+}
+
+Response for Post_Transaction Endpoint:
+
+{
+    "id": 2,
+    "product": "Sneakers",
+    "amount": 3000.0,
+    "transactionDate": "2024-02-06T00:00:00.000+00:00",
+    "description": "A good looking Sneakers",
+    "customer": {
+        "id": 1,
+        "name": null,
+        "username": null,
+        "password": null,
+        "phoneNumber": null,
+        "role": "USER",
+        "enabled": true,
+        "accountNonExpired": true,
+        "credentialsNonExpired": true,
+        "authorities": [
+            {
+                "authority": "USER"
+            }
+        ],
+        "accountNonLocked": true
+    }
+}
+
+Response for rewards balance:
+
+{
+    "id": 1,
+    "customer": {
+        "id": 1,
+        "name": "Adewale Saheed Ademola",
+        "username": "hardeymorlah12@gmail.com",
+        "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+        "phoneNumber": "08145032997",
+        "role": "USER",
+        "enabled": true,
+        "accountNonExpired": true,
+        "credentialsNonExpired": true,
+        "authorities": [
+            {
+                "authority": "USER"
+            }
+        ],
+        "accountNonLocked": true
+    },
+    "totalCashback": 300.0,
+    "currentBalance": 300.0
+}
+
+Response for Cashback history: 
+
+[
+    {
+        "id": 1,
+        "transaction": {
+            "id": 1,
+            "product": "Sneakers",
+            "amount": 3000.0,
+            "transactionDate": "2024-02-06T00:00:00.000+00:00",
+            "description": "A good looking Sneakers",
+            "customer": {
+                "id": 1,
+                "name": "Adewale Saheed Ademola",
+                "username": "hardeymorlah12@gmail.com",
+                "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+                "phoneNumber": "08145032997",
+                "role": "USER",
+                "enabled": true,
+                "accountNonExpired": true,
+                "credentialsNonExpired": true,
+                "authorities": [
+                    {
+                        "authority": "USER"
+                    }
+                ],
+                "accountNonLocked": true
+            }
+        },
+        "customer": {
+            "id": 1,
+            "name": "Adewale Saheed Ademola",
+            "username": "hardeymorlah12@gmail.com",
+            "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+            "phoneNumber": "08145032997",
+            "role": "USER",
+            "enabled": true,
+            "accountNonExpired": true,
+            "credentialsNonExpired": true,
+            "authorities": [
+                {
+                    "authority": "USER"
+                }
+            ],
+            "accountNonLocked": true
+        },
+        "transactionDate": "2024-02-06T00:00:00.000+00:00",
+        "amountEarned": 150.0,
+        "description": "A good looking Sneakers"
+    },
+    {
+        "id": 2,
+        "transaction": {
+            "id": 2,
+            "product": "Sneakers",
+            "amount": 3000.0,
+            "transactionDate": "2024-02-06T00:00:00.000+00:00",
+            "description": "A good looking Sneakers",
+            "customer": {
+                "id": 1,
+                "name": "Adewale Saheed Ademola",
+                "username": "hardeymorlah12@gmail.com",
+                "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+                "phoneNumber": "08145032997",
+                "role": "USER",
+                "enabled": true,
+                "accountNonExpired": true,
+                "credentialsNonExpired": true,
+                "authorities": [
+                    {
+                        "authority": "USER"
+                    }
+                ],
+                "accountNonLocked": true
+            }
+        },
+        "customer": {
+            "id": 1,
+            "name": "Adewale Saheed Ademola",
+            "username": "hardeymorlah12@gmail.com",
+            "password": "$2a$10$d/IoBdA0eNXAGo0FKsJrCeBQOQpp.Vg4w9xn6piLThK4fOqqr3bYK",
+            "phoneNumber": "08145032997",
+            "role": "USER",
+            "enabled": true,
+            "accountNonExpired": true,
+            "credentialsNonExpired": true,
+            "authorities": [
+                {
+                    "authority": "USER"
+                }
+            ],
+            "accountNonLocked": true
+        },
+        "transactionDate": "2024-02-06T00:00:00.000+00:00",
+        "amountEarned": 150.0,
+        "description": "A good looking Sneakers"
+    }
+]
   
   
 
