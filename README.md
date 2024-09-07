@@ -27,15 +27,18 @@ Technologies Used
 - Spring Boot
 - Spring Data JPA
 - MySQL
+- Spring Security
 
 Setup
 
 1. Clone the repository
 2. Run the application using Spring Boot
-3. Use the provided APIs to create transactions and view cashback history and rewards balance
+3. Use the provided APIs to register, login, create transactions and view cashback history and rewards balance
+   
 
 API Endpoints
-
+- POST  http://localhost:8086/api/v1/customers/register - register as a user/customer
+- POST  http://localhost:8086/api/v1/customers/login - login after successful registration
 - POST  http://localhost:8086/api/v1/transactions/post_transaction - Create a new transaction
 - GET   http://localhost:8086/api/v1/rewards/balance- View cashback history
 - GET   http://localhost:8086/api/v1/rewards/history- View customer rewards balance
