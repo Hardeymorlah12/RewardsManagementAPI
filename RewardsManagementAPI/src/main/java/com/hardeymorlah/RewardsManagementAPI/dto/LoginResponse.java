@@ -1,4 +1,4 @@
-package com.hardeymorlah.RewardsManagementAPI.model.dto;
+package com.hardeymorlah.RewardsManagementAPI.dto;
 
 import com.hardeymorlah.RewardsManagementAPI.model.Customer;
 import lombok.Builder;

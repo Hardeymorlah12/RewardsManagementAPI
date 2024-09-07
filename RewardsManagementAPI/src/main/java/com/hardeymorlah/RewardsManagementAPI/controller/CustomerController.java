@@ -1,8 +1,8 @@
 package com.hardeymorlah.RewardsManagementAPI.controller;
 
 import com.hardeymorlah.RewardsManagementAPI.model.Customer;
-import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginRequest;
-import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginResponse;
+import com.hardeymorlah.RewardsManagementAPI.dto.LoginRequest;
+import com.hardeymorlah.RewardsManagementAPI.dto.LoginResponse;
 import com.hardeymorlah.RewardsManagementAPI.service.CustomerService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

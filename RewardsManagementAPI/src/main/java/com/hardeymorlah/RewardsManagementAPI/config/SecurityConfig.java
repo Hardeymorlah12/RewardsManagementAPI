@@ -1,6 +1,6 @@
 package com.hardeymorlah.RewardsManagementAPI.config;
 
-import com.hardeymorlah.RewardsManagementAPI.model.Enum.Role;
+import com.hardeymorlah.RewardsManagementAPI.Enum.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

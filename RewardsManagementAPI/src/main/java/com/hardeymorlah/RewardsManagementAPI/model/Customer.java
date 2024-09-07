@@ -1,6 +1,6 @@
 package com.hardeymorlah.RewardsManagementAPI.model;
 
-import com.hardeymorlah.RewardsManagementAPI.model.Enum.Role;
+import com.hardeymorlah.RewardsManagementAPI.Enum.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

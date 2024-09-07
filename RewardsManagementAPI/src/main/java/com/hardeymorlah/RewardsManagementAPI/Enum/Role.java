@@ -1,4 +1,4 @@
-package com.hardeymorlah.RewardsManagementAPI.model.Enum;
+package com.hardeymorlah.RewardsManagementAPI.Enum;
 
 import lombok.Getter;
 

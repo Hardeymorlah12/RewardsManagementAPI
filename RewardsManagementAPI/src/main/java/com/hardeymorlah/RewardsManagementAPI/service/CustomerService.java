@@ -2,9 +2,9 @@ package com.hardeymorlah.RewardsManagementAPI.service;
 
 import com.hardeymorlah.RewardsManagementAPI.config.AccountConfiguration;
 import com.hardeymorlah.RewardsManagementAPI.model.Customer;
-import com.hardeymorlah.RewardsManagementAPI.model.Enum.Role;
-import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginRequest;
-import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginResponse;
+import com.hardeymorlah.RewardsManagementAPI.Enum.Role;
+import com.hardeymorlah.RewardsManagementAPI.dto.LoginRequest;
+import com.hardeymorlah.RewardsManagementAPI.dto.LoginResponse;
 import com.hardeymorlah.RewardsManagementAPI.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
