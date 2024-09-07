@@ -19,10 +19,15 @@ public class RewardsManagementAPIController {
     @Autowired
     private CashbackHistoryService cashbackHistoryService;
 
+    // This class contains the two main endpoints for this task
+
+    //This endpoint is for customers to view their balance
     @GetMapping("/balance/{customerId}")
     public ResponseEntity<CustomerRewards> getRewards(@Valid @PathVariable Long customerId) {
         return customerRewardService.getCustomerRewards(customerId);
     }
+
+    // This endpoint is for customers to retrieve their cashback history
     @GetMapping("/history")
     public ResponseEntity<List<CashbackHistory>> getCashbackHistory(@Valid @RequestParam Long customerId) {
         return cashbackHistoryService.getCashbackHistory(customerId);

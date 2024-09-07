@@ -1,10 +1,12 @@
 package com.hardeymorlah.RewardsManagementAPI.model;
 
+import com.hardeymorlah.RewardsManagementAPI.model.Enum.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -25,6 +27,7 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
+
 
 }
 

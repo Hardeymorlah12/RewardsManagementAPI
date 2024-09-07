@@ -7,7 +7,6 @@ import com.hardeymorlah.RewardsManagementAPI.model.Transaction;
 import com.hardeymorlah.RewardsManagementAPI.repository.CashbackHistoryRepository;
 import com.hardeymorlah.RewardsManagementAPI.repository.CustomerRepository;
 import com.hardeymorlah.RewardsManagementAPI.repository.CustomerRewardsRepository;
-import jakarta.validation.Valid;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,7 +26,7 @@ public class CustomerRewardService {
     private CustomerRepository customerRepository;
 
 
-                // This updates the CustomerRewards Table in the Database
+    // This updates the CustomerRewards Table in the Database
     public void processTransaction(Transaction transaction) {
         CustomerRewards customerRewards = customerRewardsRepository.findByCustomer(transaction.getCustomer());
         if (customerRewards == null) {
@@ -41,19 +40,19 @@ public class CustomerRewardService {
 
         CashbackHistory cashbackHistory = getCashbackHistory(transaction);
         cashbackHistoryRepository.save(cashbackHistory);
-    }
-                    // This updates the CashbackHistory Table in the Database
-    private static CashbackHistory getCashbackHistory(Transaction transaction) {
-        CashbackHistory cashbackHistory = new CashbackHistory();
-        cashbackHistory.setTransaction(transaction);
-        cashbackHistory.setAmountEarned(transaction.getAmount() * 0.05);
-        cashbackHistory.setTransactionDate(transaction.getTransactionDate());
-        cashbackHistory.setTransactionDate(transaction.getTransactionDate());
-        cashbackHistory.setTransactionDate(transaction.getTransactionDate());
-        cashbackHistory.setDescription(transaction.getDescription());
-        cashbackHistory.setCustomer(transaction.getCustomer());
-        return cashbackHistory;
-    }
+}
+        // This updates the CashbackHistory Table in the Database
+        private static CashbackHistory getCashbackHistory (Transaction transaction){
+            CashbackHistory cashbackHistory = new CashbackHistory();
+            cashbackHistory.setTransaction(transaction);
+            cashbackHistory.setAmountEarned(transaction.getAmount() * 0.05);
+            cashbackHistory.setTransactionDate(transaction.getTransactionDate());
+            cashbackHistory.setTransactionDate(transaction.getTransactionDate());
+            cashbackHistory.setTransactionDate(transaction.getTransactionDate());
+            cashbackHistory.setDescription(transaction.getDescription());
+            cashbackHistory.setCustomer(transaction.getCustomer());
+            return cashbackHistory;
+        }
 
     public ResponseEntity<CustomerRewards> getCustomerRewards(Long customerId) {
         Customer customer = customerRepository.findById(customerId).orElseThrow();

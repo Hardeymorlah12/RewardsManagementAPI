@@ -1,6 +1,8 @@
 package com.hardeymorlah.RewardsManagementAPI.controller;
 
 import com.hardeymorlah.RewardsManagementAPI.model.Customer;
+import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginRequest;
+import com.hardeymorlah.RewardsManagementAPI.model.dto.LoginResponse;
 import com.hardeymorlah.RewardsManagementAPI.service.CustomerService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +14,19 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
-    @PostMapping("/new_customer")
+
+    // This is the registration endpoint for users/customers
+    @PostMapping("/register")
     public ResponseEntity<Customer> postCustomer(@RequestBody @Valid Customer customer) {
         return customerService.createCustomer(customer);
     }
+    // This is the Login endpoint
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginRequest loginRequest) {
+        return customerService.authenticate(loginRequest);
 
-    @GetMapping("/customer_by_name")
+    }
+        @GetMapping("/customer_by_name")
     public ResponseEntity<Customer> getCustomerByName(@RequestParam @Valid String name) {
         return customerService.getCustomerByName(name);
     }

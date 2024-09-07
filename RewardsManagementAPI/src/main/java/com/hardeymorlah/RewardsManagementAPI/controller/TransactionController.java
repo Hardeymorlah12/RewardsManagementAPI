@@ -13,6 +13,7 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
+    // This endpoint is for customers to purchase a product from which they wil earn a reward
     @PostMapping("/post_transaction")
     public ResponseEntity<Transaction> postTransaction(@Valid @RequestBody Transaction transaction) {
         return transactionService.createTransaction(transaction);
