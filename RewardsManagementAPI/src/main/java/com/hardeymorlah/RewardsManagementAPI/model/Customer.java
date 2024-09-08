@@ -1,5 +1,6 @@
 package com.hardeymorlah.RewardsManagementAPI.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hardeymorlah.RewardsManagementAPI.Enum.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -50,6 +51,7 @@ public class Customer implements UserDetails {
     @Setter
     @Getter
     @Enumerated(EnumType.STRING)
+    @JsonIgnore
     private Role role;
 
 
@@ -57,26 +59,31 @@ public class Customer implements UserDetails {
     }
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(this.role.name()));
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return UserDetails.super.isAccountNonExpired();
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonLocked() {
         return UserDetails.super.isAccountNonLocked();
     }
 
     @Override
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return UserDetails.super.isCredentialsNonExpired();
     }
 
     @Override
+    @JsonIgnore
     public boolean isEnabled() {
         return UserDetails.super.isEnabled();
     }
