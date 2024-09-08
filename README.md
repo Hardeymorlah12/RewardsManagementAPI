@@ -40,10 +40,9 @@ API Endpoints
 - POST  http://localhost:8086/api/v1/customers/register - register as a user/customer
 - POST  http://localhost:8086/api/v1/customers/login - login after successful registration
 - POST  http://localhost:8086/api/v1/transactions/post_transaction - Create a new transaction
-- GET   http://localhost:8086/api/v1/rewards/balance/1   (PathVariable was used here)- View cashback history
-- GET   http://localhost:8086/api/v1/rewards/history?customerId=1  (RequestParam was used here)- View customer rewards balance
-
-  Response for Register endpoint:
+- GET   http://localhost:8086/api/v1/rewards/balance/1   (PathVariable was used here)- View customer rewards balance
+- GET   http://localhost:8086/api/v1/rewards/history?customerId=1  (RequestParam was used here)- 
+  Response for Register endpoint: View cashback history
 
 {
     "id": 1,
