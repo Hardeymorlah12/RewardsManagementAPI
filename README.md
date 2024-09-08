@@ -65,7 +65,7 @@ API Endpoints
     "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXJkZXltb3JsYWgxMkBnbWFpbC5jb20iLCJpYXQiOjE3MjU4MTM4MDEsImV4cCI6MTcyNTgxNzQwMSwiaXNzIjoiQWJiZXkgRnVsbFN0YWNrIENoYWxsZW5nZSBBcHAgMS4wIn0.M97qInoQnf-OBBncsDHCkzTYdJaAf-6nRdkbLutQzl0"
 }
 
-Response for Post_Transaction Endpoint:
+Response for Transaction Endpoint:
 
 {
     "id": 1,
